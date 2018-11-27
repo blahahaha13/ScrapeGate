@@ -22,5 +22,4 @@ urlpatterns = [
     path('', include('main_app.urls')),
     path('accounts/', include('accounts.urls')),
     path('scraper/', include('scraper.urls')),
-
 ]

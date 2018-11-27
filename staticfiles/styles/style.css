@@ -1,0 +1,13 @@
+/************************************
+****Footer
+************************************/
+
+footer {
+  background-color: #212529;
+  color: #fff;
+}
+
+footer .fab {
+  font-size: 50px;
+  padding: 0 20px;
+}
