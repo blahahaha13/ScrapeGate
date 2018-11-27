@@ -11,15 +11,15 @@ def login(request):
 
     if user is not None:
       auth.login(request, user)
-      return redirect('main_app/index')
+      return redirect('index')
     else:
-      return render(request, 'form.html', {'error': 'Invalid Credentials'})
+      return render(request, 'accounts/form.html', {'error': 'Invalid Credentials'})
   else:
-    return render(request, 'form.html')
+    return render(request, 'accounts/form.html')
 
 def logout(request):
   auth.logout(request)
-  return redirect('main_app/index')
+  return redirect('index')
 
 def register(request):
   if request.method == 'POST':
@@ -35,17 +35,17 @@ def register(request):
     if password == password2:
       # Check if username exists
       if User.objects.filter(username=username).exists():
-        return render(request, 'register.html', {'error': 'Username already in use'})
+        return render(request, 'accounts/register.html', {'error': 'Username already in use'})
       else:
         # Check if email exists
         if User.objects.filter(email=email).exists():
-          return render(request, 'register.html', {'error': 'Email already in use'})
+          return render(request, 'accounts/register.html', {'error': 'Email already in use'})
         else:
           # Register User
           user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
           user.save()
-          return redirect('login')
+          return redirect('accounts/login')
     else: 
-      return render(request, 'register.html', {'error': 'Passwords do not match'})
+      return render(request, 'accounts/register.html', {'error': 'Passwords do not match'})
   else: 
-    return render(request, 'register.html')
+    return render(request, 'accounts/register.html')
