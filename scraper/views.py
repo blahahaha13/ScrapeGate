@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from bs4 import BeautifulSoup
+import lxml
 import requests
 import csv
 
@@ -46,4 +47,4 @@ def scraper(request):
   else:
     print('scraping complete')
 
-  return render(request, 'scraper/results.html')
+  return redirect('/scraper/results')
