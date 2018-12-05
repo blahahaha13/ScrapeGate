@@ -1,23 +1,23 @@
 from django.db import models
 
-# Create your models here.
+# Create your models here
 
 class Passing(models.Model):
-  name = 'passing'
-  rank = models.IntegerField()
+  name = 'Passing'
+  rk = models.IntegerField()
   team = models.CharField(max_length=25)
-  attempts = models.IntegerField()
-  completions = models.IntegerField()
-  percentage = models.FloatField()
-  yards = models.IntegerField()
-  yards_attempt = models.FloatField()
-  longest_pass = models.IntegerField()
-  total_touchdowns = models.IntegerField()
-  total_interceptions = models.IntegerField()
-  total_sacks = models.IntegerField()
-  yards_lost_per_sack = models.IntegerField()
-  passer_rating = models.FloatField()
-  yards_per_game = models.IntegerField()
+  att = models.IntegerField()
+  comp = models.IntegerField()
+  pct = models.FloatField()
+  yds = models.IntegerField()
+  ydsa = models.FloatField()
+  longest = models.IntegerField()
+  td = models.IntegerField()
+  inter = models.IntegerField()
+  sack = models.IntegerField()
+  ydls = models.IntegerField()
+  rate = models.FloatField()
+  ydsg = models.IntegerField()
 
   def __str__(self):
     return self.name
@@ -77,13 +77,13 @@ class Punting(models.Model):
     return self.name
 
 class Defense(models.Model):
-  name = 'defense'
-  rank = models.IntegerField()
+  name = 'Defense'
+  rk = models.IntegerField()
   team = models.CharField(max_length=25)
   solo_tackles = models.IntegerField()
   assisted_tackles = models.IntegerField()
   total_tackles = models.IntegerField()
-  sacks = models.IntegerField()
+  sacks = models.FloatField()
   yards_lost_per_sack = models.IntegerField()
   passes_defensed = models.IntegerField()
   interceptions = models.IntegerField()
