@@ -31,8 +31,6 @@ class Receiving(models.Model):
   average = models.FloatField()
   longest = models.IntegerField()
   total_touchdowns = models.IntegerField()
-  longest_pass = models.IntegerField()
-  total_touchdowns = models.IntegerField()
   yards_per_game = models.FloatField()
   fumbles = models.IntegerField()
   fumbles_lost = models.IntegerField()
@@ -117,8 +115,8 @@ class Kicking(models.Model):
   def __str__(self):
     return self.name
 
-class GiveTake(models.Model):
-  name = 'givetake'
+class Turnovers(models.Model):
+  name = 'Turnovers'
   rank = models.IntegerField()
   team = models.CharField(max_length=25)
   interceptions_takeaways = models.IntegerField()
@@ -144,6 +142,7 @@ class Returning(models.Model):
   attempts_punts = models.IntegerField()
   yards_punts = models.IntegerField()
   average_punts = models.FloatField()
+  longest_punts = models.IntegerField()
   touchdowns_punts = models.IntegerField()
   fair_catches = models.IntegerField()
 
