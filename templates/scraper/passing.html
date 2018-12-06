@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Passing</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">Att</th>
+          <th scope="col">Comp</th>
+          <th scope="col">%</th>
+          <th scope="col">Yards</th>
+          <th scope="col">Y/A</th>
+          <th scope="col">Long</th>
+          <th scope="col">TDs</th>
+          <th scope="col">INTs</th>
+          <th scope="col">Sacks</th>
+          <th scope="col">YDL/S</th>
+          <th scope="col">Rate</th>
+          <th scope="col">YDS/G</th>
+        </tr>
+      </thead>
+      {% for passing in passing %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ passing.rk }}</th>
+            <td>{{ passing.team }}</td>
+            <td>{{ passing.att }}</td>
+            <td>{{ passing.comp }}</td>
+            <td>{{ passing.pct }}</td>
+            <td>{{ passing.yds }}</td>
+            <td>{{ passing.ydsa }}</td>
+            <td>{{ passing.longest }}</td>
+            <td>{{ passing.td }}</td>
+            <td>{{ passing.inter }}</td>
+            <td>{{ passing.sack }}</td>
+            <td>{{ passing.ydls }}</td>
+            <td>{{ passing.rate }}</td>
+            <td>{{ passing.ydsg }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

@@ -7,12 +7,14 @@ import lxml
 import csv
 import copy
 import os
-
+from .models import Passing, Rushing, Kicking, Punting, Turnovers, Returning, Defense, Receiving
 
 # Create your views here.
 
-def results(request):
-  return render(request, 'scraper/results.html')
+def passing(request):
+  passing = Passing.objects.all()
+  print(passing)
+  return render(request, 'scraper/passing.html', {'passing': passing})
 
 def scraper(request):
   var = ['passing', 'rushing', 'receiving', 'defense', 'kicking', 'punting', 'returning', 'givetake']
@@ -51,7 +53,7 @@ def scraper(request):
   else:
     print('scraping complete')
 
-  return redirect('/scraper/results')
+  return redirect('/')
 
 def import_csv(request):
   var = ['passing', 'rushing', 'receiving', 'defense', 'kicking', 'punting', 'returning', 'givetake']
@@ -74,4 +76,4 @@ def import_csv(request):
 
   print("Done!")
 
-  return redirect('/scraper/results')
+  return redirect('/')
