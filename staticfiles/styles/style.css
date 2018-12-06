@@ -14,6 +14,10 @@ nav {
   background-color: #02239A;
 }
 
+.navbar-brand {
+  font-size: 2em;
+}
+
 /************************************
 ****Layout
 ************************************/
@@ -39,12 +43,12 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: #e8eef9;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 
 h3 {
@@ -58,20 +62,35 @@ p {
   font-size: 1.4em;
 }
 /************************************
-****About
+****Main_App Pages
 ************************************/
+
+.home-background {
+  background: url("https://www.latimes.com/resizer/mgsvdCS06-KnQ7zDHgOSjGSt3VQ=/1400x0/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/A7ZJQIQHOBCPNHPQXFILVLR42I.jpg");
+  background-size: cover;
+}
 
 .about-background {
   background: url("https://timedotcom.files.wordpress.com/2014/11/odell-beckham-catch-giants.jpg");
   background-size: cover;
 }
 
+.profile-background {
+  background: url(https://i.imgur.com/gXuIEQk.gif);
+  background-size: cover;
+}
+
+.vis-wrap-3 {
+  background: rgba(2, 35, 154, .5);
+  padding: 20px;
+}
+
 .vis-wrap-2 {
-  background: rgba(165, 165, 165, .6);
+  background: rgba(2, 35, 154, .5);
   padding: 10px 0px;
 }
 
-.about {
+.white {
   color: white;
 }
 
@@ -80,7 +99,7 @@ p {
 ************************************/
 
 .vis-wrap-1 {
-  background: rgba(165, 165, 165, .9);
+  background: rgba(2, 35, 154, .5);
   width: 449px;
   padding: 10px 0px;
 }
