@@ -14,6 +14,10 @@ nav {
   background-color: #02239A;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
 .navbar-brand {
   font-size: 2em;
 }
@@ -21,6 +25,10 @@ nav {
 /************************************
 ****Layout
 ************************************/
+
+body {
+  background-color: #3265C1;
+}
 
 .blank-space {
   padding: 100px;
@@ -38,7 +46,7 @@ a {
   text-align: center;
   font-size: 1.4em;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 a:hover {
