@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="{% url 'index' %}">ScrapeGate</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
         </li>
         {% if user.is_authenticated %}
         <li class="nav-item">
-            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="{% url 'profile' %}">Profile</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
@@ -45,10 +45,10 @@
     </div>
   </nav>
 
-  <div class='blank-space'></div>
+  
   {% block content %}
   {% endblock %}
-  <div class='blank-space'></div>
+  
   <footer class="page-footer font-small">
     <ul class="list-unstyled list-inline text-center">
       <li class="list-inline-item">

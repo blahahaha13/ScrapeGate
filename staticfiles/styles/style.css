@@ -7,6 +7,14 @@
 }
 
 /************************************
+****NavBar
+************************************/
+
+nav {
+  background-color: #02239A;
+}
+
+/************************************
 ****Layout
 ************************************/
 
@@ -15,7 +23,23 @@
 }
 
 .small-space {
-  padding: 15px;
+  padding: 20px;
+}
+
+.medium-space {
+  padding: 50px;
+}
+
+a {
+  text-align: center;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
 }
 
 h1 {
@@ -23,18 +47,69 @@ h1 {
   font-size: 2.5em;
 }
 
+h3 {
+  text-align: center;
+  font-size: 1.4em;
+}
+
 p {
   text-align: center;
   padding: 15px;
   font-size: 1.4em;
+}
+/************************************
+****About
+************************************/
+
+.about-background {
+  background: url("https://timedotcom.files.wordpress.com/2014/11/odell-beckham-catch-giants.jpg");
+  background-size: cover;
+}
+
+.vis-wrap-2 {
+  background: rgba(165, 165, 165, .6);
+  padding: 10px 0px;
+}
+
+.about {
+  color: white;
+}
+
+/************************************
+****Forms
+************************************/
+
+.vis-wrap-1 {
+  background: rgba(165, 165, 165, .9);
+  width: 449px;
+  padding: 10px 0px;
+}
+
+#register-form {
+  color: white;
+}
+
+.form-background {
+  background: url("https://imagesvc.timeincapp.com/v3/fan/image?url=https%3A%2F%2Ffansided.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F08%2F116614580-san-diego-chargers-vs-san-francisco-49ers-october-15-2006.jpg.jpg&c=sc&w=850&h=560");
+  background-size: cover;
+}
+
+.register-background {
+  background: url("http://a.abcnews.com/images/Sports/gty_brady_belichick_kb_150121_16x9_992.jpg");
+  background-size: cover;
 }
 
 /************************************
 ****Tables
 ************************************/
 
+.column h1 {
+  align-self: center;
+}
+
 table {
   max-width: 800px;
+  padding-left: 15px;
 }
 
 /************************************
@@ -42,7 +117,7 @@ table {
 ************************************/
 
 footer {
-  background-color: navy;
+  background-color: #02239A;
   color: #fff;
 }
 

@@ -1,22 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <section class="form-container">
-    <div class="container">
-      <div class="login-form">
-        <h1>Sign in</h1>
-        {% if error %}
-          <p style="background-color: salmon; padding: 10px; ">{{ error }}</p>
-        {% endif %}
-        <form action="{% url 'login' %}" method="POST">
-          {% csrf_token %}
-          
-          <input type="text" name="username" placeholder="Username" minlength="2">
-          <input type="password" name="password" placeholder="Password" minlength="4">
-          <input type="submit" name="" value="login">
-        </form>
-        <h3>Not a User? <a href="{% url 'register' %}">Register</a></h3>
-      </div>
+<div class="form-background">
+  <div class='blank-space'></div>
+  <div class="container" align="center">
+    <div class="login-form vis-wrap-1">
+      <h1>Sign in</h1>
+      <div class="small-space"></div>
+      {% if error %}
+        <p style="background-color: red ; padding: 10px; ">{{ error }}</p>
+      {% endif %}
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        
+        <input type="text" name="username" placeholder="Username" minlength="2">
+        <input type="password" name="password" placeholder="Password" minlength="4">
+        <input type="submit" name="" value="login">
+      </form>
+      <div class="small-space"></div>
+      <h3>Not a User?</h3>
+      <div class="small-space"></div>
+      <a href="{% url 'register' %}">Register</a>
     </div>
-  </section>
+  </div>
+  <div class='blank-space'></div>
+</div>
 {% endblock %}

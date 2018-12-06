@@ -7,3 +7,6 @@ def index(request):
 def about(request):
 	return render(request, 'main_app/about.html')
 
+def profile(request):
+	return render(request, 'main_app/profile.html')
+

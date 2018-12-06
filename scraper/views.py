@@ -16,6 +16,36 @@ def passing(request):
   print(passing)
   return render(request, 'scraper/passing.html', {'passing': passing})
 
+def rushing(request):
+  rushing = Rushing.objects.all()
+  print(rushing)
+  return render(request, 'scraper/rushing.html', {'rushing': rushing})
+
+def returning(request):
+  returning = Returning.objects.all()
+  print(returning)
+  return render(request, 'scraper/returning.html', {'returning': returning})
+
+def punting(request):
+  punting = Punting.objects.all()
+  print(punting)
+  return render(request, 'scraper/punting.html', {'punting': punting})
+
+def receiving(request):
+  receiving = Receiving.objects.all()
+  print(receiving)
+  return render(request, 'scraper/receiving.html', {'receiving': receiving})
+
+def turnovers(request):
+  turnovers = Turnovers.objects.all()
+  print(turnovers)
+  return render(request, 'scraper/turnovers.html', {'turnovers': turnovers})
+
+def defense(request):
+  defense = Defense.objects.all()
+  print(defense)
+  return render(request, 'scraper/defense.html', {'defense': defense})
+
 def scraper(request):
   var = ['passing', 'rushing', 'receiving', 'defense', 'kicking', 'punting', 'returning', 'givetake']
 

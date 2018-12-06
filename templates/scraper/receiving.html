@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="col-md-6">
+    <h1>Receiving</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">Catches</th>
+          <th scope="col">Yards</th>
+          <th scope="col">Avg</th>
+          <th scope="col">Long</th>
+          <th scope="col">TDS</th>
+          <th scope="col">YDS/G</th>
+          <th scope="col">FUM</th>
+          <th scope="col">FUM/L</th>
+        </tr>
+      </thead>
+      {% for receiving in receiving %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ receiving.rank }}</th>
+            <td>{{ receiving.team }}</td>
+            <td>{{ receiving.receptions }}</td>
+            <td>{{ receiving.yards }}</td>
+            <td>{{ receiving.average }}</td>
+            <td>{{ receiving.longest }}</td>
+            <td>{{ receiving.total_touchdowns }}</td>
+            <td>{{ receiving.yards_per_game }}</td>
+            <td>{{ receiving.fumbles }}</td>
+            <td>{{ receiving.fumbles_lost }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

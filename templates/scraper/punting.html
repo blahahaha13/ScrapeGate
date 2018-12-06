@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Punting</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">Punts</th>
+          <th scope="col">Yards</th>
+          <th scope="col">Long</th>
+          <th scope="col">Avg</th>
+          <th scope="col">Net</th>
+          <th scope="col">Block</th>
+          <th scope="col">IN 20</th>
+          <th scope="col">TB</th>
+          <th scope="col">FC</th>
+          <th scope="col">Ret</th>
+          <th scope="col">Ret/Y</th>
+          <th scope="col">Avg/Y</th>
+        </tr>
+      </thead>
+      {% for punting in punting %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ punting.rank }}</th>
+            <td>{{ punting.team }}</td>
+            <td>{{ punting.punts }}</td>
+            <td>{{ punting.yards }}</td>
+            <td>{{ punting.longest }}</td>
+            <td>{{ punting.average }}</td>
+            <td>{{ punting.net_yards_average }}</td>
+            <td>{{ punting.blocked_punts }}</td>
+            <td>{{ punting.number_of_times_pinned }}</td>
+            <td>{{ punting.touchbacks }}</td>
+            <td>{{ punting.fair_catches }}</td>
+            <td>{{ punting.punts_returned }}</td>
+            <td>{{ punting.punt_return_yardage_total }}</td>
+            <td>{{ punting.punt_return_yardage_average }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

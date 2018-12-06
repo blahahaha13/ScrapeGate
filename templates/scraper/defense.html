@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Defense</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">Solo</th>
+          <th scope="col">Ast</th>
+          <th scope="col">Total</th>
+          <th scope="col">Sacks</th>
+          <th scope="col">YL/S</th>
+          <th scope="col">PD</th>
+          <th scope="col">Int</th>
+          <th scope="col">Int/Y</th>
+          <th scope="col">L/Int</th>
+          <th scope="col">IntTD</th>
+          <th scope="col">FF</th>
+          <th scope="col">F/Rec</th>
+          <th scope="col">F/TDs</th>
+        </tr>
+      </thead>
+      {% for defense in defense %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ defense.rk }}</th>
+            <td>{{ defense.team }}</td>
+            <td>{{ defense.solo_tackles }}</td>
+            <td>{{ defense.assisted_tackles }}</td>
+            <td>{{ defense.total_tackles }}</td>
+            <td>{{ defense.sacks }}</td>
+            <td>{{ defense.yards_lost_per_sack }}</td>
+            <td>{{ defense.passes_defensed }}</td>
+            <td>{{ defense.interceptions }}</td>
+            <td>{{ defense.interception_return_yardage }}</td>
+            <td>{{ defense.longest_interception_return }}</td>
+            <td>{{ defense.interception_return_touchdowns }}</td>
+            <td>{{ defense.forced_fumbles }}</td>
+            <td>{{ defense.fumbles_recovered }}</td>
+            <td>{{ defense.fumbles_returned_for_touchdowns }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

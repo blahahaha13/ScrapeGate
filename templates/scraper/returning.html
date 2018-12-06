@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Returning</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">ATT/K</th>
+          <th scope="col">YDS/K</th>
+          <th scope="col">AVG/K</th>
+          <th scope="col">Long/K</th>
+          <th scope="col">TD/K</th>
+          <th scope="col">ATT/P</th>
+          <th scope="col">YDS/P</th>
+          <th scope="col">AVG/P</th>
+          <th scope="col">Long/P</th>
+          <th scope="col">TD/P</th>
+          <th scope="col">FairC</th>
+        </tr>
+      </thead>
+      {% for returning in returning %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ returning.rank }}</th>
+            <td>{{ returning.team }}</td>
+            <td>{{ returning.attempts_kickoffs }}</td>
+            <td>{{ returning.yards_kickoffs }}</td>
+            <td>{{ returning.average_kickoffs }}</td>
+            <td>{{ returning.longest_kickoffs }}</td>
+            <td>{{ returning.touchdowns_kickoffs }}</td>
+            <td>{{ returning.attempts_punts }}</td>
+            <td>{{ returning.yards_punts }}</td>
+            <td>{{ returning.average_punts }}</td>
+            <td>{{ returning.longest_punts }}</td>
+            <td>{{ returning.touchdowns_punts }}</td>
+            <td>{{ returning.fair_catches }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Rushing</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">ATT</th>
+          <th scope="col">Yards</th>
+          <th scope="col">YDS/A</th>
+          <th scope="col">LONG</th>
+          <th scope="col">TDs</th>
+          <th scope="col">YDS/G</th>
+          <th scope="col">FUM</th>
+          <th scope="col">FUM/L</th>
+        </tr>
+      </thead>
+      {% for rushing in rushing %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ rushing.rank }}</th>
+            <td>{{ rushing.team }}</td>
+            <td>{{ rushing.attempts }}</td>
+            <td>{{ rushing.yards }}</td>
+            <td>{{ rushing.yards_per_attempt }}</td>
+            <td>{{ rushing.longest }}</td>
+            <td>{{ rushing.total_touchdowns }}</td>
+            <td>{{ rushing.yards_per_game }}</td>
+            <td>{{ rushing.fumbles }}</td>
+            <td>{{ rushing.fumbles_lost }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

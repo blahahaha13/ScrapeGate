@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Turnovers</h1>
+    <div class='small-space'></div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">Team</th>
+          <th scope="col">INT/T</th>
+          <th scope="col">FUM/T</th>
+          <th scope="col">Total/T</th>
+          <th scope="col">INT/G</th>
+          <th scope="col">FUM/G</th>
+          <th scope="col">Total/G</th>
+          <th scope="col">DIF</th>
+        </tr>
+      </thead>
+      {% for turnovers in turnovers %}
+        <tbody>
+          <tr>
+            <th scope="row">{{ turnovers.rank }}</th>
+            <td>{{ turnovers.team }}</td>
+            <td>{{ turnovers.interceptions_takeaways }}</td>
+            <td>{{ turnovers.fumbles_takeaways }}</td>
+            <td>{{ turnovers.total_turnovers_takeaways }}</td>
+            <td>{{ turnovers.interceptions_givaways }}</td>
+            <td>{{ turnovers.fumbles_givaways }}</td>
+            <td>{{ turnovers.total_turnovers_givaways }}</td>
+            <td>{{ turnovers.difference }}</td>
+          </tr>
+        </tbody>
+      {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}
